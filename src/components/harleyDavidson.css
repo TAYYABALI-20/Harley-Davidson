@@ -1,0 +1,1362 @@
+:is(.my-garage) {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* margin-top: 45rem; */
+    margin-top: 10.45rem;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-garage)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgb(8, 8, 8) 0%, rgb(9, 9, 9) 5%, rgb(9, 9, 9) 100%);
+    transition: height 3s ease-in-out;
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+:is(.open-the-garage)::after {
+    height: 2%;
+    transition: height 5s ease-in-out;
+    transition-delay: 1s;
+}
+
+:is(.close-the-garage)::after {
+    height: 100%;
+    transition: height 5s ease-in-out;
+    transition-delay: 1s;
+}
+
+h1 {
+    margin-top: -4rem;
+    margin-bottom: 0;
+    /* margin-top: 35rem; */
+    /* margin-bottom: -34.65rem; */
+    text-align: center;
+    color: #ffc600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20),
+        0rem 0rem .11rem rgb(20, 20, 20);
+    ;
+    transform: matrix(6, 0, 0, 5, 0, 125);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-garage-open-system) {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(5rem);
+    width: 8rem;
+    height: 2.5rem;
+    background: linear-gradient(0deg, rgb(09, 09, 09) 1%, rgba(1, 1, 1, 0.975) 5%, rgba(1, 1, 1, 0.975) 100%);
+    border-radius: 25%;
+    transition:
+        background 6s ease-in-out,
+        transform 5s ease-in-out;
+    transition-delay: 1s;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+:is(.moving-system-to-top) {
+    transform: translateX(-50%) translateY(-40.6rem);
+    background: linear-gradient(0deg, rgb(10, 10, 10) 1%, rgba(6, 6, 6, 0.975) 5%, rgba(6, 6, 6, 0.975) 100%);
+    transition:
+        background 6s ease-in-out,
+        transform 5s ease-in-out;
+    transition-delay: 1s;
+    opacity: 1;
+    z-index: 2;
+}
+
+:is(.my-garage-open-system)::before,
+:is(.my-garage-open-system)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-garage-open-system)::before {
+    left: 1rem;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+:is(.light-on)::before {
+    background: #ffc600;
+    transition: background 1s ease-in-out;
+}
+
+:is(.light-off)::before {
+    background: #101010;
+    transition: background 1s ease-in-out;
+}
+
+:is(.my-garage-open-system)::after {
+    right: -0.5rem;
+    width: 1.85rem;
+    height: 1.85rem;
+    background: linear-gradient(360deg, rgb(5, 5, 5) 0%, rgb(10, 10, 10) 5%, rgb(10, 10, 10) 100%);
+}
+
+:is(.my-garage-open-system-lock) {
+    position: absolute;
+    bottom: -3.5%;
+    left: 55.25%;
+    transform: translateX(-50%) translateY(2.1rem) rotate(-55deg);
+    transform-style: preserve-3d;
+    width: 6rem;
+    height: 6rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:
+        background-image 0.2s ease-in-out,
+        transform 3s ease-in-out;
+    transition-delay: 1s;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+:is(.lock) {
+    transform: translateX(-50%) translateY(2.1rem) rotate(-55deg);
+    background-image: url(../assets/car-door-lock.png);
+    transition: transform 5s ease-in-out;
+    transition-delay: 1s;
+}
+
+:is(.unlock) {
+    transform: translateX(-50%) translateY(-43.5rem) rotate(-55deg);
+    background-image: url(../assets/car-door-unlock.png);
+    transition: transform 5s ease-in-out;
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+:is(.my-garage-close-system) {
+    position: absolute;
+    top: 3.5rem;
+    transform: translateX(-50%);
+    width: 4rem;
+    aspect-ratio: 1;
+    background: linear-gradient(360deg, rgb(8, 8, 8) 0%, rgb(9, 9, 9) 5%, rgb(9, 9, 9) 100%);
+    border-radius: 25%;
+    transition: all 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+:is(.my-garage-close-system):nth-child(1) {
+    left: 4rem;
+}
+
+:is(.my-garage-close-system):nth-child(2) {
+    right: 0.5rem;
+}
+
+:is(.my-garage-close-system-lights) {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.30rem;
+    padding: 0.25rem;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-garage-close-system-light) {
+    width: 0.70rem;
+    aspect-ratio: 1;
+    background: #FF6C00;
+    box-shadow:
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20),
+        0 0 .2rem rgb(20, 20, 20);
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+/* MY BIKE */
+
+:is(.my-bike-container) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(7rem);
+    margin-left: 7rem;
+    transition: all 1.5s ease-in-out;
+    z-index: -2;
+}
+
+:is(.my-bike) {
+    position: relative;
+    transition: all 1.5s ease-in-out;
+}
+
+@keyframes startTheJourney {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100rem);
+    }
+}
+
+:is(.going-for-a-drive) {
+    animation: startTheJourney 5s ease-in-out 2s forwards;
+}
+
+@keyframes comeBackToGarage {
+    0% {
+        transform: translateX(100rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+:is(.coming-back-to-garage) {
+    animation: comeBackToGarage 7.15s ease-in-out backwards;
+    animation-delay: 5s;
+}
+
+/* @keyframes bikeStunt {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(40rem);
+    }
+}
+
+:is(.bike-stunt) {
+    animation: bikeStunt 6s ease-in-out backwards alternate;
+}
+
+:is(.no-stunt) {
+    transform: translateX(0) rotate(0);
+    margin-left: 0;
+    transition: transform 5s linear ease-in-out;
+} */
+
+:is(.my-bike)::before,
+:is(.my-bike)::after {
+    content: '';
+    position: absolute;
+    top: 3rem;
+    width: 35rem;
+    height: 35rem;
+    background: #FF6C00;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike)::before {
+    right: -7.5rem;
+    clip-path: polygon(40% 28%, 20% 28%, 12% 50%, 30% 90%, 30% 90%, 30% 90%, 30% 90%, 30% 90%, 30% 90%, 65% 90%, 65% 90%, 65% 35%);
+}
+
+:is(.my-bike)::after {
+    left: -7.5rem;
+    clip-path: polygon(50% 54%, 40% 90%, 40% 89%, 40% 90%, 40% 90%, 0 90%, 0 45%, 40% 45%, 45% 35%, 70% 35%, 78% 45%, 76% 54%);
+}
+
+:is(.my-bike-layer) {
+    position: absolute;
+    top: 4.94rem;
+    left: 0;
+    transform: translateX(-45.5rem);
+    width: 80rem;
+    height: 35rem;
+    background: #d45800;
+    clip-path: polygon(40% 28%, 28.8% 28%, 26% 45%, 35% 90%, 30% 90%, 30% 90%,
+            30% 90%, 30% 90%, 30% 90%, 65% 90%, 65% 90%, 65% 55%);
+    transition: all 1.5s ease-in-out;
+    z-index: -1;
+}
+
+:is(.my-bike-petrol-cap) {
+    position: absolute;
+    top: 5.5rem;
+    left: -18.5rem;
+    transform: rotateX(85deg);
+    transform-style: preserve-3d;
+    width: 4rem;
+    height: 20rem;
+    background: linear-gradient(0deg, rgb(9, 9, 9) 50%, rgb(9, 9, 9) 50%, rgb(9, 9, 9) 100%);
+    border-radius: 50%;
+    border: 2px solid #FF6C00;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+    cursor: pointer;
+}
+
+:is(.my-bike-petrol-cap)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 2.5rem;
+    height: 10rem;
+    background: linear-gradient(0deg, rgb(20, 20, 20) 50%, rgb(15, 15, 15) 50%, rgb(15, 15, 15) 100%);
+    box-shadow: 0 0 .1rem #ff0000;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-petrol-cap)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 0.75rem;
+    height: 5rem;
+    /* background: linear-gradient(to bottom right, rgb(250, 0, 0), rgb(255, 38, 0)); */
+    background: #FF6C00;
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-front-light) {
+    position: absolute;
+    top: -5.5rem;
+    right: 19.4rem;
+    width: 25rem;
+    height: 35rem;
+    background: linear-gradient(360deg, rgb(25, 25, 25) 0%, rgb(12, 12, 12) 5%, rgb(12, 12, 12) 100%);
+    clip-path: polygon(72% 50%, 70% 35%, 79.5% 34.4%, 80% 45%, 78% 50%);
+    transition: background 1.5s ease-in-out;
+    z-index: -1;
+}
+
+:is(.my-bike-front-light-power) {
+    position: relative;
+    top: 0;
+    right: 6.90rem;
+    width: 100%;
+    height: 100%;
+    background: rgb(9, 9, 9);
+    transition: background 1.5s ease-in-out;
+}
+
+:is(.power-on) {
+    background: rgb(255, 255, 255);
+    transition: background 0.5s ease-in-out;
+}
+
+:is(.power-off) {
+    background: rgb(9, 9, 9);
+    transition: background 0.2s ease-in-out;
+}
+
+:is(.my-bike-front-light-shadows) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 9rem;
+    left: -38rem;
+    width: 1.25rem;
+    height: 1.75rem;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-front-light-shadow) {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    box-shadow:
+        -14rem 1rem 10rem rgb(255, 255, 255),
+        9rem 1rem 8rem rgb(175, 175, 175),
+        -12rem 1rem 7.75rem rgb(200, 200, 200),
+        4rem 1rem 7.5rem rgb(200, 200, 200),
+        -14rem 1rem 9rem rgb(255, 255, 255),
+        9rem -1rem 7rem rgb(175, 175, 175),
+        -14rem 1rem 8rem rgb(200, 200, 200),
+        -5rem 1rem 8rem rgb(175, 175, 175),
+        -2rem 1rem 7rem rgb(200, 200, 200),
+        -10rem 0.5rem 7rem rgb(200, 200, 200),
+        -8rem 1rem 7rem rgb(200, 200, 200),
+        7rem -1rem 8rem rgb(255, 255, 255),
+        -4rem -1rem 7rem rgb(175, 175, 175),
+        -1rem -1rem 7rem rgb(200, 200, 200),
+        -5rem -1rem 7rem rgb(200, 200, 200),
+        3rem -1rem 8rem rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+:is(.glowing-shadow) {
+    opacity: 0.60;
+    transition: opacity 0.5s ease-in-out;
+}
+
+:is(.no-shadow) {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+:is(.my-bike-handle) {
+    position: relative;
+    margin-top: -2rem;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-handle)::before,
+:is(.my-bike-handle)::after {
+    content: '';
+    position: absolute;
+    width: 35rem;
+    height: 34rem;
+    background: #FF6C00;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-handle)::before {
+    top: 0;
+    right: -5.42rem;
+    transform: rotate(-1.5deg);
+    clip-path: polygon(35% 13%, 22% 16%, 22% 24%, 15% 24%, 15% 35%, 4% 68%,
+            12% 70%, 30% 24%, 40% 20%, 55% 15%, 55% 10%, 40% 15%);
+}
+
+:is(.my-bike-handle)::after {
+    top: -16rem;
+    right: -7.15rem;
+    clip-path: polygon(35% 87%, 22% 84%, 22% 76%, 25% 76%, 30% 76%, 40% 80%, 55% 85%, 55% 90%, 40% 85%);
+    transform: rotate(12deg);
+}
+
+:is(.my-bike-hand-break),
+:is(.my-bike-clutch) {
+    position: absolute;
+    width: 0.75rem;
+    height: 7rem;
+    background: linear-gradient(0deg, rgb(18, 18, 18) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    transition: all 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+:is(.my-bike-hand-break) {
+    top: 0;
+    left: -14.8rem;
+    transform: translateY(0rem) rotate(65deg);
+    z-index: -1;
+}
+
+:is(.break-pressed) {
+    transform: translateY(0.25rem) rotate(65deg);
+    transition: transform 1s ease-in-out;
+}
+
+:is(.break-released) {
+    transform: translateY(0rem) rotate(65deg);
+    transition: transform 1s ease-in-out;
+}
+
+:is(.my-bike-clutch) {
+    top: 10.45rem;
+    left: -15.35rem;
+    transform: rotate(-55deg);
+    z-index: 1;
+}
+
+:is(.clutch-pressed) {
+    transform: translateY(0rem) rotate(-55deg);
+    transition: transform 1s ease-in-out;
+}
+
+:is(.clutch-released) {
+    transform: translateY(0.25rem) rotate(-55deg);
+    transition: transform 2s ease-in-out;
+    transition-delay: 2s;
+}
+
+:is(.my-bike-stunt-button),
+:is(.my-bike-self-start-button),
+:is(.my-bike-front-light-button) {
+    position: absolute;
+    border-radius: 0.15rem;
+    transition: all 1.5s ease-in-out;
+    cursor: pointer;
+}
+
+:is(.my-bike-stunt-button),
+:is(.my-bike-self-start-button) {
+    transform: rotate(-13.95deg);
+    width: 2rem;
+    height: 1.25rem;
+    background: linear-gradient(0deg, rgb(18, 18, 18) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    z-index: 1;
+}
+
+:is(.my-bike-stunt-button) {
+    top: 5.70rem;
+    left: -21.70rem;
+}
+
+:is(.my-bike-self-start-button) {
+    top: 5.15rem;
+    left: -19.55rem;
+}
+
+:is(.my-bike-front-light-button) {
+    top: 10.25rem;
+    left: -19.70rem;
+    transform: rotate(26deg);
+    width: 2rem;
+    height: 1.25rem;
+    background: linear-gradient(0deg, rgb(18, 18, 18) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    z-index: 2;
+}
+
+:is(.my-bike-key-container) {
+    position: absolute;
+    top: 7.25rem;
+    left: -24rem;
+    transform: rotateX(80deg);
+    transform-style: preserve-3d;
+    width: 2.5rem;
+    height: 5rem;
+    background: linear-gradient(0deg, rgb(18, 18, 18) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+    z-index: 2;
+    cursor: pointer;
+}
+
+:is(.my-bike-key) {
+    position: relative;
+    top: -4.75rem;
+    left: 68%;
+    transform: translate(-50%, -50%) rotate(5deg);
+    width: 4.75rem;
+    height: 15rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+:is(.ignition-on) {
+    transform: translate(-50%, -50%) rotate(6deg);
+    transition: transform 0.1s linear ease-in-out;
+}
+
+:is(.ignition-off) {
+    transform: translate(-50%, -50%) rotate(5deg);
+    transition: transform 0.1s linear ease-in-out;
+}
+
+:is(.my-bike-key)::before,
+:is(.my-bike-key)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgb(12, 12, 12) 50%, rgb(18, 18, 18) 50%, rgb(18, 18, 18) 100%);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-key)::before {
+    left: 50%;
+    clip-path: polygon(35% 55%, 40% 55%, 40% 70%, 45% 70%, 45% 100%,
+            50% 100%, 50% 100%, 50% 20%, 40% 20%, 30% 40%);
+}
+
+:is(.my-bike-key)::after {
+    right: -50%;
+    clip-path: polygon(65% 55%, 60% 55%, 60% 70%, 55% 70%, 55% 100%,
+            50% 100%, 50% 100%, 50% 20%, 60% 20%, 70% 40%);
+}
+
+:is(.my-bike-key-chain) {
+    position: relative;
+    top: -25rem;
+    left: 1.5rem;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 1.65rem;
+    height: 8rem;
+    background: rgb(0, 0, 0);
+    border: 3px solid rgb(20, 20, 20);
+    border-radius: 50%;
+    transition: transform 2s ease-in-out;
+    z-index: -1;
+}
+
+:is(.move-key-chain) {
+    transform: translate(-50%, -50%) rotate(5deg);
+    transition: 2s linear ease-in-out;
+}
+
+:is(.dont-move-key-chain) {
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: 2s linear ease-in-out;
+}
+
+:is(.my-bike-key-chain)::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    Left: -0.80rem;
+    transform: translate(-50%, -50%) rotate(60deg);
+    width: 3rem;
+    height: 0.5rem;
+    background: rgb(20, 20, 20);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-key-chain)::after {
+    content: '';
+    position: absolute;
+    top: 17%;
+    Left: -3.5rem;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 9rem;
+    background: rgb(20, 20, 20);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-made-by) {
+    position: absolute;
+    top: 1rem;
+    left: -3.5rem;
+    transform: translate(-50%, -50%) rotateY(-70deg);
+    font-size: 5rem;
+    color: #ffffff;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+    cursor: text;
+}
+
+:is(.my-bike-jumps-front),
+:is(.my-bike-jumps-back) {
+    position: absolute;
+    top: 22.5rem;
+    left: -28.20rem;
+    transform: rotate(17.5deg);
+    width: 1.85rem;
+    height: 7rem;
+    background: linear-gradient(0deg, rgb(14, 14, 14) 50%, rgb(9, 9, 9) 50%, rgb(9, 9, 9) 100%);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-jumps-front)::after,
+:is(.my-bike-jumps-back)::after {
+    content: '';
+    position: absolute;
+    bottom: -4.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 4.5rem;
+    background: linear-gradient(0deg, rgb(12, 12, 12) 50%, rgb(14, 14, 14) 50%, rgb(14, 14, 14) 100%);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-jumps-front),
+:is(.my-bike-jumps-front)::after {
+    z-index: -1;
+}
+
+:is(.my-bike-seat) {
+    position: absolute;
+    top: 5.25rem;
+    left: 10.25rem;
+    transform: translateX(-50%);
+    width: 30rem;
+    height: 30rem;
+    background: rgb(255, 110, 14);
+    clip-path: polygon(0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 45%, 37.5% 45%,
+            43% 33.35%, 53.5% 33.35%, 43% 55%, 0 55%);
+    transition: all 1.5s ease-in-out;
+    z-index: 2;
+}
+
+:is(.my-bike-seat-layer-1) {
+    position: absolute;
+    top: 3.75rem;
+    left: 10.25rem;
+    transform: translateX(-50%);
+    width: 30rem;
+    height: 34.5rem;
+    background: #d45800;
+    clip-path: polygon(0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 45%, 37.5% 45%,
+            43% 33.35%, 57% 33.35%, 45% 55%, 0 55%);
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-seat-layer-2) {
+    position: absolute;
+    top: 17.45rem;
+    left: -42.75rem;
+    transform: rotateY(180deg);
+    width: 38rem;
+    height: 9.60rem;
+    background: #d45800;
+    clip-path: polygon(0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 45%, 48% 45%,
+            49% 33%, 49.5% 29%, 47% 55%, 0 55%);
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-seat-layer-3) {
+    position: absolute;
+    top: -18.51rem;
+    left: -5.60rem;
+    width: 2rem;
+    height: 74.5rem;
+    background: #d45800;
+    clip-path: polygon(0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 55%, 0 45%, 42% 45.3%,
+            45% 55%, 0 55%);
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-gear-system) {
+    position: absolute;
+    top: 29rem;
+    left: -10.5rem;
+    transform: translateX(-50%);
+    /* transform-style: preserve-3d; */
+    width: 12rem;
+    height: 3.5rem;
+    padding: 0.15rem;
+    /* background: linear-gradient(0deg, rgb(09, 09, 09) 1%, rgba(03, 03, 03, 0.950) 5%, rgba(03, 03, 03, 0.950) 100%); */
+    background: #000000;
+    border-radius: 0.25rem;
+    transition: all 1.5s ease-in-out;
+    z-index: 1;
+}
+
+/* :is(.my-bike-gear-system)::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	background: #FF6C00;
+	border: 2px solid #FF6C00;
+	transition: all 1.5s ease-in-out;
+	z-index: 1;
+} */
+
+:is(.my-bike-gear) {
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%) rotateX(85deg);
+    transform-style: preserve-3d;
+    width: 75%;
+    height: 4rem;
+    background: linear-gradient(0deg, rgb(20, 20, 20) 50%, rgb(20, 20, 20) 50%, rgb(20, 20, 20) 100%);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-forward-gear) {
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 1rem;
+    height: 12rem;
+    background: linear-gradient(0deg, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    border-radius: 5%;
+    transition: all 1.5s ease-in-out;
+    animation: gearModeOn 5s linear infinite forwards;
+    cursor: pointer;
+}
+
+:is(.gear-forward-enabled) {
+    transform: translate(-50%, -50%) rotateY(-25deg);
+    transition: transform 5s linear ease-in-out;
+}
+
+:is(.gear-forward-disabled) {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    transition: transform 2.5s linear ease-in-out;
+}
+
+:is(.my-bike-reverse-gear) {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(4rem, -120%);
+    transform-style: preserve-3d;
+    width: 2rem;
+    height: 15rem;
+    background: linear-gradient(0deg, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+    border-radius: 30%;
+    transition: all 1.5s ease-in-out;
+    animation: gearModeOff 5s linear infinite backwards;
+    cursor: pointer;
+}
+
+:is(.gear-reverse-enabled) {
+    transform: translate(4rem, -120%) rotateY(20deg);
+    transition: transform 5s linear ease-in-out;
+}
+
+:is(.gear-reverse-disabled) {
+    transform: translate(4rem, -120%) rotateY(0deg);
+    transition: transform 5s linear ease-in-out;
+}
+
+:is(.my-bike-foot-step) {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(85deg);
+    transform-style: preserve-3d;
+    width: 2.25rem;
+    height: 32rem;
+    background: linear-gradient(0deg, rgb(12, 12, 12) 50%, rgb(20, 20, 20) 50%, rgb(20, 20, 20) 100%);
+    transition: all 1.5s ease-in-out;
+    z-index: -1;
+}
+
+:is(.my-bike-tires) {
+    position: relative;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-tire) {
+    position: absolute;
+    top: 25rem;
+    transform: translateX(-50%);
+    width: 14rem;
+    aspect-ratio: 1;
+    background: linear-gradient(360deg, rgb(8, 8, 8) 0%, rgb(9, 9, 9) 5%, rgb(9, 9, 9) 100%);
+    border-radius: 50%;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.start-riding) {
+    animation: startRiding 5s linear 2s infinite;
+}
+
+:is(.stop-riding) {
+    animation: startRiding 9s linear 8.1s alternate;
+}
+
+@keyframes startRiding {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+:is(.my-bike-tire):nth-child(1) {
+    left: -29rem;
+    z-index: -1;
+}
+
+/* @keyframes rotatingFrontTireWhileDoingStunt {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+:is(.reverse-stunt) {
+    animation: rotatingFrontTireWhileDoingStunt 6s linear alternate;
+} */
+
+:is(.my-bike-tire):nth-child(2) {
+    left: 15.7rem;
+}
+
+:is(.my-bike-inside-rims) {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 27rem;
+    transition: all 1.5s ease-in-out;
+    z-index: 2;
+}
+
+:is(.my-bike-inside-rim) {
+    position: relative;
+    top: 2.10rem;
+    left: 7.05rem;
+    transform: translateX(-50%);
+    width: 10rem;
+    aspect-ratio: 1;
+    background: linear-gradient(0deg, rgb(125, 125, 125) 0%, rgb(150, 150, 150) 45%, rgb(125, 125, 125) 100%);
+    ;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 60% 100%, 40% 100%, 0% 70%, 0% 30%);
+    transition: all 1.5s ease-in-out;
+}
+
+@keyframes rotatingInsideRim {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+:is(.rotate-the-rim) {
+    animation: rotatingInsideRim 5s linear 2s infinite;
+}
+
+:is(.do-not-rotate-the-rim) {
+    animation: rotatingInsideRim 5s linear 5s alternate;
+}
+
+:is(.my-bike-inside-rim)::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 6.15rem;
+    aspect-ratio: 1;
+    background: linear-gradient(0deg, rgb(10, 10, 10) 0%, rgb(10, 10, 10) 45%, rgb(10, 10, 10) 100%);
+    ;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 50% 100%, 50% 100%, 0% 70%, 0% 30%);
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-tire-layer-1),
+:is(.my-bike-tire-layer-2),
+:is(.my-bike-tire-layer-3),
+:is(.my-bike-tire-layer-4) {
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+}
+
+:is(.my-bike-fire) {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    left: 16.11rem;
+    width: 1.5rem;
+    height: 4rem;
+    background: linear-gradient(to bottom right, rgb(247, 223, 4), rgb(247, 4, 4));
+    clip-path: ellipse(40% 80%);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+}
+
+:is(.explode) {
+    animation: explode 0.5s ease-in-out alternate;
+}
+
+@keyframes explode {
+    50% {
+        opacity: 1;
+    }
+}
+
+:is(.donot-explode) {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+:is(.my-bike-fire-kick) {
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 29rem;
+    width: 1.75rem;
+    height: 2rem;
+    box-shadow:
+        -14rem 1rem 10rem rgb(255, 255, 255),
+        9rem 1rem 8rem rgb(175, 175, 175),
+        -12rem 1rem 7.75rem rgb(200, 200, 200),
+        4rem 1rem 7.5rem rgb(200, 200, 200),
+        -14rem 1rem 9rem rgb(255, 255, 255),
+        9rem 1rem 7rem rgb(175, 175, 175),
+        -14rem 1rem 8rem rgb(200, 200, 200),
+        -5rem 1rem 8rem rgb(175, 175, 175),
+        -2rem 1rem 7rem rgb(200, 200, 200),
+        -10rem 0.5rem 7rem rgb(200, 200, 200),
+        -8rem 1rem 7rem rgb(200, 200, 200),
+        7rem 1rem 8rem rgb(255, 255, 255),
+        -4rem 1rem 7rem rgb(175, 175, 175),
+        -1rem 1rem 7rem rgb(200, 200, 200),
+        -5rem 1rem 7rem rgb(200, 200, 200),
+        3rem 1rem 8rem rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+}
+
+:is(.explode-smoke) {
+    animation: explode 0.5s ease-in-out alternate;
+}
+
+:is(.donot-explode-smoke) {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+:is(.my-bike-tire-layer-1) {
+    top: 7.90rem;
+    left: -15.20rem;
+    width: 26rem;
+    height: 35rem;
+    background: linear-gradient(0deg, rgb(9, 9, 9) 50%, rgb(14, 14, 14) 50%, rgb(14, 14, 14) 100%);
+    clip-path: polygon(57.25% 65.75%, 50.1% 73.30%, 71% 84%, 100% 71.75%, 93.75% 63.5%, 70.5% 73%);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+
+:is(.my-bike-tire-layer-2) {
+    top: 11rem;
+    left: -19rem;
+    width: 30rem;
+    height: 35rem;
+    background: linear-gradient(0deg, rgb(14, 14, 14) 50%, rgb(9, 9, 9) 50%, rgb(9, 9, 9) 100%);
+    clip-path: polygon(56.25% 64.25%, 50% 72%, 74% 86.5%, 100% 73.5%, 92% 62%, 74% 72.5%);
+    z-index: 1;
+}
+
+:is(.my-bike-tire-layer-3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 31rem;
+    left: 3rem;
+    width: 14rem;
+    height: 2.5rem;
+    background: linear-gradient(0deg, rgb(14, 14, 14) 50%, rgb(14, 14, 14) 50%, rgb(14, 14, 14) 100%);
+    z-index: 1;
+}
+
+:is(.my-bike-tire-layer-4) {
+    top: 23.5rem;
+    left: 9.85rem;
+    transform: rotate(-33deg);
+    width: 3rem;
+    height: 10rem;
+    background: linear-gradient(0deg, rgb(14, 14, 14) 50%, rgb(9, 9, 9) 50%, rgb(9, 9, 9) 100%);
+    z-index: 1;
+}
+
+:is(.my-bike-back-light) {
+    position: absolute;
+    top: 2.85rem;
+    left: -6.75rem;
+    width: 35rem;
+    height: 35.45rem;
+    background: rgb(9, 9, 9);
+    clip-path: polygon(54% 53.75%, 45% 35%, 70% 35%, 78% 45%, 76% 53.75%);
+    transition: background 0.2s ease-in-out;
+    z-index: -1;
+}
+
+:is(.back-light-on),
+:is(.number-plate-active),
+:is(.number-plate-active)::after {
+    background: rgb(250, 0, 0) !important;
+    transition: background 0.5s ease-in-out;
+}
+
+:is(.back-light-off),
+:is(.number-plate-not-active),
+:is(.number-plate-not-active)::after {
+    background: rgb(9, 9, 9);
+    transition: background 0.2s ease-in-out;
+}
+
+:is(.my-bike-number-plate) {
+    position: absolute;
+    top: 21.30rem;
+    left: 19.20rem;
+    transform: rotate(3deg);
+    width: 4rem;
+    height: 0.70rem;
+    background: rgb(9, 9, 9);
+    transition: background 0.2s ease-in-out;
+    z-index: -1;
+}
+
+/* :is(.my-bike-number-plate)::before {
+	content: '';
+	position: absolute;
+	top: -0.6rem;
+	left: 120%;
+	transform: translate(-50%, -50%);
+	width: 1.25rem;
+	aspect-ratio: 1;
+	background: linear-gradient(0deg, rgb(18, 18, 18) 50%, rgb(12, 12, 12) 50%, rgb(12, 12, 12) 100%);
+	border-radius: 50%;
+	transition: all 1.5s ease-in-out;
+	z-index: 1;
+	cursor: pointer;
+} */
+
+:is(.my-bike-number-plate)::after {
+    content: '';
+    position: absolute;
+    top: 2.45rem;
+    left: 5.4rem;
+    transform: translate(-50%, -50%) rotateY(86.5deg) rotateX(10deg);
+    width: 42rem;
+    height: 5rem;
+    background: rgb(9, 9, 9);
+    transition: background 0.2s ease-in-out;
+    z-index: 1;
+}
+
+:is(.my-bike-number-plate-text) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.11rem;
+    position: absolute;
+    top: 21.65rem;
+    left: 23.35rem;
+    font-size: 1rem;
+    text-shadow:
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010,
+        0 0 .1rem #101010;
+    width: 2.4rem;
+    color: #101010;
+    transition: color 0.2s ease-in-out;
+    z-index: 2;
+}
+
+:is(.number-plate-text-active) {
+    color: #ffffff;
+    transition: color 0.5s ease-in-out;
+}
+
+:is(.number-plate-text-not-active) {
+    color: #202020;
+    transition: color 0.2s ease-in-out;
+}
+
+/* MY BIKE */
